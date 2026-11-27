@@ -1,0 +1,141 @@
+Volgorde van de code:
+1. scrape_hornets.py
+2. clean_dataset.py
+3. review_images.py
+4. train_hornet_model.py
+5. predict_hornet_nests.py
+6. review_all_hornet_images.py
+7. reorganize_verified_hornets.py
+8. train_verified_hornets.py
+9. drone_hornet_live.py
+10. YOLOE_test.py (YOLOE)
+11. prepare_hornet_yolo.py (merging bounding box and images for YOLO training)
+12. train_hornet_yolo_gpu.py
+13. YOLO_test_webcam.py
+14. evaluate_custom_yolo.py
+
+
+test webcam. test_webcam.py
+
+############################################
+GEBRUIKTE AI-MODELLEN
+############################################
+
+*CLIP: Automatische filtering van de verzamelde afbeeldingen.
+*ResNet-18: Classificatie van afbeeldingen met en zonder nesten.
+*YOLOE: Eerste experimenten met objectdetectie zonder eigen training.
+*YOLO26s: Zelfgetraind objectdetectiemodel dat nesten herkent en hun locatie aanduidt met bounding boxes.  
+
+############################################
+# LIBRARIES - Yellow Legged Hornet AI PROJECT
+############################################
+
+# ==========================================
+# 1. STANDAARD PYTHON-LIBRARIES
+# ==========================================
+
+#import argparse
+#Verwerkt argumenten die je via de terminal aan een programma meegeeft.
+
+#import csv
+#Leest en schrijft CSV-bestanden.
+
+#import json
+#Leest en schrijft gegevens in JSON-formaat.
+
+#import os
+#Werkt met het besturingssysteem, mappen en bestanden.
+
+#import random
+#Genereert willekeurige getallen en selecties
+
+#import shutil
+#Kopieert, verplaatst en verwijdert bestanden en mappen.
+
+#import time
+#Biedt functies voor tijdsmetingen en pauzes.
+
+#from collections import Counter, defaultdict
+#counter: Telt hoe vaak bepaalde waarden voorkomen.
+#defaultdict: Maakt dictionaries met automatische standaardwaarden.
+
+#from datetime import datetime
+#Werkt met datums en tijdstippen.
+
+#from pathlib import Path
+#Maakt het eenvoudiger om met bestandspaden te werken.
+
+
+# ==========================================
+# 2. GRAFISCHE GEBRUIKERSINTERFACE
+# ==========================================
+
+#import tkinter as tk
+#Maakt grafische vensters en knoppen in Python.
+
+#from tkinter import Tk, filedialog, messagebox, ttk
+#Tk: Maakt het hoofdvenster van een Tkinter-applicatie.
+#filedialog: Opent een venster om bestanden of mappen te selecteren.
+#messagebox: Toont meldingen, waarschuwingen en foutberichten.
+#ttk: Bevat modernere Tkinter-widgets.
+
+# ==========================================
+# 3. AFBEELDINGSVERWERKING
+# ==========================================
+
+#import cv2
+#Verwerkt afbeeldingen en video.
+
+#import numpy as np
+#Werkt efficiënt met numerieke arrays en matrices.
+
+#from PIL import Image, ImageOps, ImageTk
+#Image: Opent, bewerkt en bewaart afbeeldingen
+#ImageOps: Bevat extra bewerkingen voor afbeeldingen.
+#ImageTk: Maakt afbeeldingen geschikt voor Tkinter.
+
+# ==========================================
+# 4. ARTIFICIAL INTELLIGENCE / DEEP LEARNING
+# ==========================================
+
+#import torch
+#Framework voor machinelearning en neurale netwerken.
+
+#from torch import nn
+#Bevat bouwstenen voor neurale netwerken, zoals lagen en verliesfuncties.
+
+#from torch.utils.data import (
+#    Dataset,
+#    DataLoader,
+#    WeightedRandomSampler
+#)
+#Dataset: Definieert hoe trainingsgegevens worden geladen.
+#DataLoader: Laadt trainingsgegevens in batches.
+#WeightedRandomSampler: Selecteert voorbeelden met instelbare kansen.
+
+#from torchvision import models, transforms
+#models: Bevat vooraf gedefinieerde computervisiemodellen.
+#transforms:Zet afbeeldingen om en voert transformaties uit.
+
+#from transformers import pipeline
+#pipeline:Vereenvoudigt het gebruik van pretrained AI-modellen.
+
+# ==========================================
+# 5. DATA VERZAMELEN VIA INTERNET
+# ==========================================
+
+#import requests
+#Verstuurt HTTP-verzoeken naar websites en API's.
+
+#from requests.adapters import HTTPAdapter
+#Past het verbindingsgedrag van Requests aan.
+
+#from urllib3.util.retry import Retry
+#Configureert automatische nieuwe pogingen bij bepaalde netwerkfouten.
+
+# ==========================================
+# 6. VOORTGANG WEERGEVEN
+# ==========================================
+
+#from tqdm import tqdm
+#Toont een voortgangsbalk tijdens lange processen.

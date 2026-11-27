@@ -1,0 +1,4 @@
+names:
+  0: hornet_nest
+path: .
+train: train.txt

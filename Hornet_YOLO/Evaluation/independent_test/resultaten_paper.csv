@@ -1,0 +1,13 @@
+Metric,Waarde
+TP,75
+FP,10
+FN,13
+TN,Niet gedefinieerd
+Confidence threshold,0.25
+Precision (matrix),0.8823529411764706
+Recall (matrix),0.8522727272727273
+F1-score (matrix),0.8670520231213872
+Precision (Ultralytics),0.9016013722937753
+Recall (Ultralytics),0.8295454545454546
+mAP50,0.8388310982127882
+mAP50-95,0.5420917057847775

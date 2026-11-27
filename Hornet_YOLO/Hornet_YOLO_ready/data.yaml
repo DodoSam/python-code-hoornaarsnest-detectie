@@ -1,0 +1,6 @@
+path: "D:/AI_Lab/Hornet_YOLO/Hornet_YOLO_ready"
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: hornet_nest
